@@ -1,0 +1,12 @@
+version: '2.1'
+
+services:
+  api-huc-editor:
+    image: registry.diginfra.net/tsd/api-huc-editor:0.1
+    container_name: api-huc-editor
+    restart: always
+    volumes:
+      - ./src:/var/www/html
+    ports:
+      - 80:80
+

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ComponentSpec isProfile="true" CMDVersion="1.2" CMDOriginalVersion="1.2" xsi:noNamespaceSchemaLocation="https://infra.clarin.eu/CMDI/1.x/xsd/cmd-component.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Header>
+        <ID>clarin.eu:cr1:p_1659015263829</ID>
+        <Name>cloneTest</Name>
+        <Description>Test profile for testing cloned clones in HuC CMDI editor</Description>
+        <Status>deprecated</Status>
+    </Header>
+    <Component name="cloneTest" CardinalityMin="1" CardinalityMax="1">
+        <Component name="World" CardinalityMin="1" CardinalityMax="1">
+            <Component name="Country" CardinalityMin="1" CardinalityMax="unbounded">
+                <Element name="name" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" Multilingual="true" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+                <Component name="Cities" CardinalityMin="1" CardinalityMax="unbounded">
+                    <Element name="city" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" Multilingual="true" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+                    <Component name="District" CardinalityMin="0" CardinalityMax="unbounded">
+                        <Element name="name" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" Multilingual="true" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+                    </Component>
+                </Component>
+            </Component>
+        </Component>
+    </Component>
+</ComponentSpec>
