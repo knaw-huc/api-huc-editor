@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ComponentSpec isProfile="true" CMDVersion="1.2" CMDOriginalVersion="1.2" xsi:noNamespaceSchemaLocation="https://infra.clarin.eu/CMDI/1.x/xsd/cmd-component.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Header>
+        <ID>clarin.eu:cr1:p_1685529187074</ID>
+        <Name>DataStoriesMetadata</Name>
+        <Description>Metadata sub editor for Data Stories editor</Description>
+        <Status>development</Status>
+    </Header>
+    <Component name="DataStoriesMetadata" CardinalityMin="1" CardinalityMax="1">
+        <Element name="title" ValueScheme="string" CardinalityMin="1" CardinalityMax="unbounded" Multilingual="true" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+        <Element name="creator" ValueScheme="string" CardinalityMin="0" CardinalityMax="unbounded"/>
+        <Element name="created" ValueScheme="date" CardinalityMin="0" CardinalityMax="1"/>
+        <Element name="language" ValueScheme="string" CardinalityMin="1" CardinalityMax="1"/>
+        <Element name="identifier" ValueScheme="string" CardinalityMin="1" CardinalityMax="1"/>
+        <Component name="Content" CardinalityMin="1" CardinalityMax="1">
+            <Element name="abstract" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" Multilingual="true" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+            <Element name="description" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" Multilingual="true"/>
+            <Element name="subject" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" Multilingual="true"/>
+            <Element name="tableOfContents" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" Multilingual="true"/>
+        </Component>
+        <Component name="Actor" CardinalityMin="1" CardinalityMax="1">
+            <Element name="contributor" ValueScheme="string" CardinalityMin="0" CardinalityMax="unbounded"/>
+            <Element name="publisher" ValueScheme="string" CardinalityMin="0" CardinalityMax="unbounded"/>
+            <Element name="reviewer" ValueScheme="string" CardinalityMin="0" CardinalityMax="unbounded"/>
+        </Component>
+        <Component name="URI" CardinalityMin="1" CardinalityMax="1">
+            <Element name="landingpage" ValueScheme="string" CardinalityMin="1" CardinalityMax="1" cue:DisplayPriority="1" xmlns:cue="http://www.clarin.eu/cmd/cues/1"/>
+            <Element name="endpoint" ValueScheme="string" CardinalityMin="1" CardinalityMax="1"/>
+        </Component>
+    </Component>
+</ComponentSpec>

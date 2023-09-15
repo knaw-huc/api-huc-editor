@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmd:CMD xmlns:cmd="http://www.clarin.eu/cmd/" xmlns:ec="https:huygens.knaw.nl/ecodicesnl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.clarin.eu/cmd/ https://catalog.clarin.eu/ds/ComponentRegistry/rest/registry/1.1/profiles/clarin.eu:cr1:p_1659015263818/xsd" CMDVersion="1.1">
+    <cmd:Header>
+        <cmd:MdCreator>Rob Zeeman</cmd:MdCreator>
+        <cmd:MdCreationDate></cmd:MdCreationDate>
+        <cmd:MdProfile></cmd:MdProfile>
+    </cmd:Header>
+    <cmd:Resources/>
+    <cmd:Components/>
+</cmd:CMD>
