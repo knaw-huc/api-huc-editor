@@ -53,7 +53,7 @@ function get_json($identifier) {
     }
 }
 
-function get_record($json, $profileID, $recordFile)
+function get_record($json, $profileID)
 {
     $struc = json_decode($json, 'JSON_OBJECT_AS_ARRAY');
     $cmdi = new DOMDocument();

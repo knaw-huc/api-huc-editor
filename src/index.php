@@ -28,8 +28,8 @@ switch ($action) {
             throw_error("Missing identifier");
         }
         break;
-    case "get_xml":
-        $cmdi = get_record($_POST["ccData"], $_POST["ccProfileID"], $_POST["ccRecordFile"]);
+    case "create_record":
+        $cmdi = get_record($_POST["ccData"], $_POST["ccProfileID"]);
         header('Content-Type: text/xml');
         echo $cmdi->saveXML();
         break;
