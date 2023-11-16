@@ -101,7 +101,7 @@ class Ccfparser {
     private function _createRecordArray($record) {
         $resources = array();
         $cmdiRec = new DOMDocument();
-        $cmdiRec->load($record);
+        $cmdiRec->loadXML($record);
         $xpath = new DOMXPath($cmdiRec);
         $nodes = $xpath->query("/cmd:CMD/cmd:Resources/cmd:ResourceProxyList/cmd:ResourceProxy");
         foreach ($nodes as $node) {

@@ -28,6 +28,13 @@ switch ($action) {
             throw_error("Missing identifier");
         }
         break;
+    case "get_record_json":
+        if (isset($_POST["profile"]) &&  isset($_POST["record"])) {
+            get_record_json($_POST["profile"], $_POST["record"]);
+        } else {
+            throw_error("Missing identifier");
+        }
+        break;
     case "create_record":
         $cmdi = get_record($_POST["ccData"], $_POST["ccProfileID"]);
         header('Content-Type: text/xml');

@@ -53,6 +53,23 @@ function get_json($identifier) {
     }
 }
 
+function get_record_json($identifier, $rec_data) {
+    $files = get_collection(PROFILE_DIR);
+    $tweaks = get_collection(TWEAK_DIR);
+    if (in_array($identifier . '.xml', $files)) {
+        $parser = new Ccfparser();
+        if (!in_array($identifier . 'Tweak.xml', $tweaks))
+        {
+            $response = $parser->parseTweak(PROFILE_DIR . $identifier .".xml", null, null, $rec_data );
+        } else {
+            $response = $parser->parseTweak(PROFILE_DIR . $identifier .".xml", TWEAK_DIR . $identifier . 'Tweak.xml', TWEAKER, $rec_data );
+        }
+        send_json($response);
+    } else {
+        throw_error("Unknown identifier");
+    }
+}
+
 function get_record($json, $profileID)
 {
     $struc = json_decode($json, 'JSON_OBJECT_AS_ARRAY');
